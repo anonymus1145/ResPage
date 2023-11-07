@@ -1,1 +1,3 @@
-console.log("Restaurant App");
+import _ from 'lodash';
+import './style.css';
+
