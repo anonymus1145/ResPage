@@ -53,18 +53,22 @@ export default function onLoad(content) {
     //Create buttons
     let home = document.createElement("button");
     home.classList.add("rounded-2xl", "w-24","h-14", "hover:bg-stone-500", "font-semibold");
+    home.id = "home";
     home.textContent = "Home";
 
     let menu = document.createElement("button");
     menu.classList.add("rounded-2xl", "w-24", "h-14","hover:bg-stone-500", "font-semibold");
+    menu.id = "menu";
     menu.textContent = "Menu";
 
     let contact = document.createElement("button");
     contact.classList.add("rounded-2xl", "w-24","h-14", "hover:bg-stone-500", "font-semibold");
+    contact.id = "contact";
     contact.textContent = "Contact";
 
     let about = document.createElement("button");
     about.classList.add("rounded-2xl", "w-24","h-14", "hover:bg-stone-500", "font-semibold");
+    about.id = "about";
     about.textContent = "About";
 
     btnList.appendChild(home);
