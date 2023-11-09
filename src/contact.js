@@ -1,8 +1,4 @@
-// HTML on-load event
-// src/page-load.js
-
-export default function onLoad(content) {
-
+export default function contact(content) {
     //Create header
     let header = document.createElement("header");
     header.classList.add("grid", "grid-rows-1", "bg-stone-300", "h-28", "rounded-3xl");
@@ -77,8 +73,69 @@ export default function onLoad(content) {
     //Create main
     let main = document.createElement("main");
     main.classList.add("rounded-3xl", "h-screen", "bg-center", "bg-cover");
-    main.style.backgroundImage = "url('/img/kura-w-bulce.jpg')";
+    
+    let form = document.createElement("form");
+    form.classList.add("mx-auto", "max-w-2xl", "px-4", "sm:px-6", "lg:max-w-7xl", "lg:px-8", "mt-16");
+    main.appendChild(form);
 
+    let element1 = document.createElement("div");
+    element1.classList.add("space-y-12");
+    form.appendChild(element1);
+
+    let element2 = document.createElement("div");
+    element2.classList.add("border-b", "border-gray-900/10", "pb-12");
+    element1.appendChild(element2);
+
+    let h2 = document.createElement("h2");
+    h2.classList.add("text-base", "font-semibold", "leading-7" ,"text-gray-900");
+    h2.textContent = "Contact Us";
+    element2.appendChild(h2);
+
+    let element3 = document.createElement("div");
+    element3.classList.add("mt-10", "grid", "grid-cols-1", "gap-x-6", "gap-y-8", "sm:grid-cols-6");
+    element1.appendChild(element3);
+
+    let element3_1 = document.createElement("div");
+    element3_1.classList.add("col-span-full");
+    element3.appendChild(element3_1);
+
+    let label = document.createElement("label");
+    label.classList.add("block", "text-sm", "font-medium", "leading-6", "text-gray-900");
+    label.setAttribute("for", "about");
+    label.textContent = "About";
+    element3_1.appendChild(label);
+
+    let mt_2 = document.createElement("div");
+    mt_2.classList.add("mt-2");
+    element3_1.appendChild(mt_2);
+
+    let textarea = document.createElement("textarea");
+    textarea.classList.add("block", "w-full", "rounded-md", "border-0", "border-gray-300", "py-1.5", "text-gray-900", "shadow-sm", "ring-1", "ring-inset", "ring-gray-300", "focus:ring-2", "focus:ring-inset", "focus:ring-indigo-600", "sm:text-sm", "sm:leading-6");
+    textarea.setAttribute("id", "about");
+    textarea.setAttribute("rows", "3");
+    textarea.setAttribute("name", "about");
+    mt_2.appendChild(textarea);
+
+    let p = document.createElement("p");
+    p.classList.add("mt-3", "text-sm", "text-grey-600", "leading-6");
+    p.textContent = "Write a few sentences to contact us.";
+    element3_1.appendChild(p);
+
+    let elementBtn = document.createElement("div");
+    elementBtn.classList.add("mt-6", "flex", "justify-center", "gap-x-6","items-center");
+    main.appendChild(elementBtn);
+
+    let btnCancel = document.createElement("button");
+    btnCancel.classList.add("font-semibold", "text-sm", "leading-6", "text-gray-900", "hover:text-red-600", "hover:underline");
+    btnCancel.textContent = "Cancel";
+    btnCancel.setAttribute("type", "button");
+    elementBtn.appendChild(btnCancel);
+
+    let btnSubmit = document.createElement("button");
+    btnSubmit.classList.add("rounded-md", "bg-indigo-600", "px-3" ,"py-2", "text-sm", "font-semibold", "text-black" ,"shadow-sm", "hover:bg-indigo-500", "focus-visible:outline", "focus-visible:outline-2", "focus-visible:outline-offset-2", "focus-visible:outline-indigo-600");
+    btnSubmit.textContent = "Submit";
+    btnSubmit.setAttribute("type", "submit");
+    elementBtn.appendChild(btnSubmit);
 
     //Create footer
     let footer = document.createElement("footer");

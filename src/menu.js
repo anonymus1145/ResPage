@@ -46,6 +46,7 @@ export default function menu(content) {
      //Create btn-list
      let btnList = document.createElement("btn-list");
      btnList.classList.add("flex", "gap-2", "text-lg", "ml-48");
+     btnList.id = "btn-list";
      
      //Create buttons
      let home = document.createElement("button");
@@ -63,22 +64,18 @@ export default function menu(content) {
      contact.id = "contact";
      contact.textContent = "Contact";
  
-     let about = document.createElement("button");
-     about.classList.add("rounded-2xl", "w-24","h-14", "hover:bg-stone-500", "font-semibold");
-     about.id = "about";
-     about.textContent = "About";
  
      btnList.appendChild(home);
      btnList.appendChild(menu);
      btnList.appendChild(contact);
-     btnList.appendChild(about);
+ 
  
      logo.appendChild(btnList);
  
  
      //Create main
      let main = document.createElement("main");
-     main.classList.add("rounded-3xl", "h-screen", "bg-center", "bg-cover");
+     main.classList.add("rounded-3xl", "bg-center", "bg-cover", "bg-no-repeat", "my-4", "p-4", "h-screen");
      main.style.backgroundImage = "url('/img/menu.jpg')";
      
  
